@@ -19,18 +19,12 @@ class Biudzetas:
         with open("biudzeto_zurnalas.pkl", 'wb') as file:
             pickle.dump(self.zurnalas, file)
 
-    def prideti_pajamu_irasa(self):
-        suma = abs(float(input("Suma: ")))
-        siuntejas = input("Siuntėjas: ")
-        info = input("Papildoma informacija: ")
+    def prideti_pajamu_irasa(self, suma, siuntejas, info):
         irasas = PajamuIrasas(suma, siuntejas, info)
         self.zurnalas.append(irasas)
         self.irasyti_faila()
 
-    def prideti_islaidu_irasa(self):
-        suma = abs(float(input("Suma: ")))
-        atsiskaitymas = input("Atsiskaitymo būdas: ")
-        isigyta = input("Įsigyta prekė/paslauga: ")
+    def prideti_islaidu_irasa(self, suma, atsiskaitymas, isigyta):
         irasas = IslaiduIrasas(suma, atsiskaitymas, isigyta)
         self.zurnalas.append(irasas)
         self.irasyti_faila()

@@ -13,9 +13,15 @@ if __name__ == "__main__":
     """))
         match veiksmas:
             case 1:
-                biudzetas.prideti_pajamu_irasa()
+                suma = abs(float(input("Suma: ")))
+                siuntejas = input("Siuntėjas: ")
+                info = input("Papildoma informacija: ")
+                biudzetas.prideti_pajamu_irasa(suma, siuntejas, info)
             case 2:
-                biudzetas.prideti_islaidu_irasa()
+                suma = abs(float(input("Suma: ")))
+                atsiskaitymas = input("Atsiskaitymo būdas: ")
+                isigyta = input("Įsigyta prekė/paslauga: ")
+                biudzetas.prideti_islaidu_irasa(suma, atsiskaitymas, isigyta)
             case 3:
                 biudzetas.parodyti_ataskaita()
             case 4:
